@@ -1,0 +1,546 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Reddots- CMPE 280</title>
+
+<!--Bootstrap Element and Grid System-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<!--Main Elements CSS-->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<!--Font Awesome-->
+<link href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!--OWL Carousel CSS-->
+<link href="bower_components/owl.carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="bower_components/owl.carousel/assets/owl.theme.default.css" rel="stylesheet" type="text/css">
+
+<!--FlexSlider CSS-->
+<link href="bower_components/FlexSlider/flexslider.css" rel="stylesheet" type="text/css">
+
+<!--Megafolio CSS-->
+<link href="bower_components/megafolio/css/settings.css" rel="stylesheet" type="text/css">
+
+<!--FancyBox CSS-->
+<link href="bower_components/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+<!--jQuery Fullpage CSS-->
+<link href="css/jquery.fullPage.css" rel="stylesheet" type="text/css">
+
+<!--Tootips CSS-->
+<link href="bower_components/tooltipster/css/tooltipster.css" rel="stylesheet" type="text/css">
+<link href="bower_components/tooltipster/css/themes/tooltipster-shadow.css" rel="stylesheet" type="text/css">
+
+<!--Tabulous CSS-->
+<link href="bower_components/tabulous/tabulous.css" rel="stylesheet" type="text/css">
+
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300%7COpen+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
+
+<!--Color Scheme Setting-->
+<link href="css/color.css" rel="stylesheet" type="text/css">
+
+           <script src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="./css/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+        <style>
+.btn-lg {
+  color: #4099FF
+}
+.container1{
+  background-color: #C2E1F7;
+	background: linear-gradient(to bottom, #C2E1F7 1%,#C2E1F7 100%);
+}
+#cloud-intro{
+  position: relative;
+  height: 100%;
+  background: url(http://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(http://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(http://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(http://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+	animation: wind 20s linear infinite;
+}
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
+
+}
+section, section div {
+  /* See it in slo-mo, you can change this */
+  transition-duration: .6s;
+}
+
+* { box-sizing: border-box; }
+
+section, .button { transition-timing-function: ease; }
+
+section {
+  display: inline-block;
+  position: relative;
+  padding: .800rem .800rem .800rem;
+  height: 5.0rem;
+  background: #A9ADB6;
+  border-radius: .25rem;
+  perspective: 300;
+  box-shadow: 0 -1px 2px #fff, inset 0 1px 2px rgba(0,0,0,.2), inset 0 .25rem 1rem rgba(0,0,0,.1);
+}
+
+
+.button { opacity: 0; 
+width: 300px;}
+
+.cover {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transform-origin: center bottom;
+  transform-style: preserve-3d;
+  font: 1.25em/2 "icon";
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.innie, .outie, .spine, .shadow { position: absolute; width: 100%; }
+
+.innie, .outie {
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.1) 100%);
+  border-radius: .25rem;
+}
+.innie:after, .outie:after {}
+
+.innie {
+  background-color: #67E2FE;
+  text-shadow: 0 -2px 4px rgba(0,0,0,.2);
+}
+
+.spine {
+  top: .150rem;
+  background: #20C7F3;
+  height: .150rem;
+  transform: rotateX(90deg);
+  transform-origin: center top;
+}
+
+.shadow {
+  top: 100%;
+  left: 0;
+  height: 3.5rem;
+  transform-origin: center top;
+  transform: rotateX(90deg);
+  opacity: 0;
+  z-index: 0;
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,.6) 0%, transparent 100%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, transparent 100%);
+  border-radius: .4rem;
+
+}
+
+.outie {
+  background-color: #2EC8FA;
+  transform: translateZ(.150rem);
+  text-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+section:hover { background: #EBEFF2; }
+section:hover .button { opacity: 1; }
+
+section:hover .cover, section:hover .innie, section:hover .spine, section:hover .outie, section:hover .spine { transition-timing-function: cubic-bezier(.2,.7,.1,1.1); }
+
+section:hover .cover { transform: rotateX(-120deg);  }
+
+section:hover .innie { background-color: #3ADAFC; }
+section:hover .spine { background-color: #52B1E0; }
+section:hover .outie { background-color: #2174A0; color: rgba(255,255,255,0); }
+
+section:hover .shadow { 
+  opacity: 1;
+  transform: rotateX(45deg) scale(.95);
+}
+
+
+small {
+  font: .8rem/1 sans-serif;
+  padding-top: 4rem;
+  color: #777;
+}
+small a { color: #222; text-decoration: none; border-bottom: thin solid #ccc; }
+small a:hover { border-bottom-color: #222; }
+
+
+@font-face { font-family:icon; src: url('http://bennettfeely.com/fonts/icons.woff'); }
+    </style>
+
+</head>
+
+<body>
+
+<!--Page Loader-->
+<div class="loader-wrapper">
+	<div class="loader">Loading...</div>
+</div>
+<!--End-->
+
+<div id="main-menu" class="left">
+
+    <div class="nav-open">
+        <a href="#" class="nav-btn" data-action="open">
+        	<div class="burger-wrap">
+                <div class="menu-burger">
+                    <div class="menu1"></div>
+                    <div class="menu2"></div>
+                    <div class="menu3"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <!--Sidebar Navigation Start-->
+	<div class="sidebar-nav">
+    	<div class="nav-inner-wrap">
+    	
+            <!--Menu Close-->
+            <div class="nav-close">
+                <a href="#" class="nav-btn" data-action="close">
+                    <div class="menu-close">
+                        <div class="menu1"></div>
+                        <div class="menu2"></div>
+                    </div>
+                </a>
+            </div>
+            
+            <!--Logo Start-->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="logo"/>
+                </a>
+            </div>
+            <!--Logo End-->
+            
+            <!--Navigation Menu Start-->
+            <nav>
+                <ul class="nav-menu">
+                    <li data-menuanchor="panelBlock1" class="active"><a href="index.html#panelBlock1">Home</a></li>
+                    <li data-menuanchor="panelBlock2"><a href="index.html#panelBlock2">Tweet Trends</a></li>
+                    <li data-menuanchor="panelBlock3"><a href="index.html#panelBlock3">Our Team</a></li>
+            </nav>
+            <!--Navigation Menu End-->
+		
+		</div>
+    </div>
+    
+</div>
+
+<div id="fullpage">
+ <div class="section panel-1 video-background" data-bg-color="#212121">
+
+    	<div class="social-media">
+                    	<h1 class="slide-extralarge-title animate-fadeInDown">Red Dots</h1>
+			<div class="slide-description-small animate-fadeInDown"><br>Trendalize- Twitter trend analyzer</br></div>
+
+        </div>
+
+    	<div class="mouse-scroll">
+        	<a id="moveSectionDown" href="#">
+        		<img src="images/mouse-scroll.png" alt="mouse scroll" />
+            </a>
+        </div>
+        
+        <div class="myVideo" data-image-src="images/upload/video-bg-image-small-devices.jpg">
+        	<video autoplay loop muted controls>
+            	<source src="media/video/my-video.mp4" type="video/mp4">
+				<source src="media/video/my-video.webm" type="video/webm">
+            </video>
+        </div>
+     
+		  
+        <div class="overlay" data-bg-color="#1ac4ff" data-opacity="0.4"></div>
+        
+    </div>
+
+ <div class="section panel-2 dark" data-bg-color="#474747" data-image-src="images/blank.gif"> 
+    <div class="container">
+  <div id="cloud-intro">
+    <br/>
+    <br/>
+     <br/>
+    <br/>
+  <div class="bird-div">
+    <div class="twitter-bird step"></div>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <section style="margin-left:40%;">
+  <div class="button">
+    <a href="./dash.html" class="twitter-follow-button" data-show-count="false" data-size="large" style="margin-left:30%; font-size:20px;">Tweet Map!</a>
+  </div>
+  <div class="cover">
+    <div class="innie"></div>
+    <div class="spine"></div>
+    <div class="outie"></div>
+</div>
+  <div class="shadow"></div>
+</section>
+  <section style="margin-left:40%;">
+  <div class="button">
+    <a href="./cloud.html" class="twitter-follow-button" data-show-count="false" data-size="large" style="margin-left:30%; font-size:20px;">Word Cloud!</a>
+  </div>
+  <div class="cover">
+    <div class="innie"></div>
+    <div class="spine"></div>
+    <div class="outie"></div>
+</div>
+  <div class="shadow"></div>
+</section>
+  <section style="margin-left:40%;">
+  <div class="button">
+    <a href="./trends.html" class="twitter-follow-button" data-show-count="false" data-size="large" style="margin-left:30%; font-size:20px;">Trends!</a>
+  </div>
+  <div class="cover">
+    <div class="innie"></div>
+    <div class="spine"></div>
+    <div class="outie"></div>
+</div>
+  <div class="shadow"></div>
+</section>
+  <section style="margin-left:40%;">
+  <div class="button">
+    <a href="./photo.html" class="twitter-follow-button" data-show-count="false" data-size="large" style="margin-left:30%; font-size:20px;">Photo Search!</a>
+  </div>
+  <div class="cover">
+    <div class="innie"></div>
+    <div class="spine"></div>
+    <div class="outie"></div>
+</div>
+  <div class="shadow"></div>
+</section>
+
+</div>
+
+    </div>
+</div>
+  
+<div class="section panel-3 home-team-panel" data-bg-color="#474747">
+		<div class="container">
+        	<div class="row">
+            	
+                <div class="inner-wrapper">
+                	
+                    <!--Block Title-->
+                    <div class="block-title">
+                        <h1 style="font-color:white;">Our Team</h1>
+                    </div>
+                    <!--End-->
+                    
+                </div>
+                
+                <div class="animate-fadeInUp">
+                
+                	<!--Carousel Items Start-->
+                    <div class="owl-carousel box-carousel-wrapper">
+                    
+                        <!--Team 1 Start-->
+                        <div class="carousel-item">
+                            <div class="carousel-inner">
+                                <figure>
+                                    <img src="images/upload/1.png" alt="thumbnail" />
+                                </figure>
+                                <div class="content-block-detail">
+                                    <div class="fab light-blue ripple">
+                                    	<a href="#"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                    <h3>Leona Cherla</h3>
+                                    <div class="item-list-description">Front End Developer</div>
+                                    <nav class="team-social-media">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Team 1 End-->
+                        
+                        <!--Team 2 Start-->
+                        <div class="carousel-item">
+                            <div class="carousel-inner">
+                                <figure>
+                                    <img src="images/upload/2.png" alt="thumbnail" />
+                                </figure>
+                                <div class="content-block-detail">
+                                    <div class="fab light-blue ripple">
+                                    	<a href="#"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                    <h3>Priyanka Yedluri</h3>
+                                    <div class="item-list-description">Quality Assurance.</div>
+                                    <nav class="team-social-media">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Team 2 End-->
+                        
+                        <!--Team 3 Start-->
+                        <div class="carousel-item">
+                            <div class="carousel-inner">
+                                <figure>
+                                    <img src="images/upload/3.png" alt="thumbnail" />
+                                </figure>
+                                <div class="content-block-detail">
+                                    <div class="fab light-blue ripple">
+                                    	<a href="#"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                    <h3>Santhi Rajesh</h3>
+                                    <div class="item-list-description">Quality Assurance</div>
+                                    <nav class="team-social-media">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Team 3 End-->
+                        
+                        <!--Team 4 Start-->
+                        <div class="carousel-item">
+                            <div class="carousel-inner">
+                                <figure>
+                                    <img src="images/upload/4.png" alt="thumbnail" />
+                                </figure>
+                                <div class="content-block-detail">
+                                    <div class="fab light-blue ripple">
+                                    	<a href="#"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                    <h3>Bharti Kodwani</h3>
+                                    <div class="item-list-description">Platform Engineer</div>
+                                    <nav class="team-social-media">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Team 4 End-->
+                        
+                        <!--Team 5 Start-->
+                        <div class="carousel-item">
+                            <div class="carousel-inner">
+                                <figure>
+                                    <img src="images/upload/5.png" alt="thumbnail" />
+                                </figure>
+                                <div class="content-block-detail">
+                                    <div class="fab light-blue ripple">
+                                    	<a href="#"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                    <h3>Vaishali Gangadhara</h3>
+                                    <div class="item-list-description">Backend Engineer</div>
+                                    <nav class="team-social-media">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Team 5 End-->
+                    
+                    </div>
+                	<!--Carousel Items End-->
+                
+                </div>
+                
+            </div>
+        </div>
+        <div class="overlay" data-bg-color="#474747" data-opacity="0.4"></div>
+    </div>      
+    
+</div>
+ 
+    
+    
+    
+    
+<!--jQuery files-->
+<script type="text/javascript" src="js/vendor/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/vendor/jquery.easings.min.js"></script>
+<script type="text/javascript" src="js/vendor/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/jquery.viewport.js"></script>
+
+<!--jQuery Retina-->
+<script type="text/javascript" src="js/retina.js"></script>
+
+<!--jQuery Sidebar-->
+<script type="text/javascript" src="js/jquery.sidebar.min.js"></script>
+
+<!--jQuery OWL-Carousel-->
+<script type="text/javascript" src="bower_components/owl.carousel/owl.carousel.min.js"></script>
+
+<!--jQuery FlexSlider-->
+<script type="text/javascript" src="bower_components/FlexSlider/jquery.flexslider.js"></script>
+
+<!--jQuery Megafolio-->
+<script type="text/javascript" src="bower_components/megafolio/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="bower_components/megafolio/js/jquery.themepunch.megafoliopro.js"></script>
+
+<!--jQuery FancyBox-->
+<script type="text/javascript" src="bower_components/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<!--jQuery Fullpage-->
+<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+<!--jQuery Midnight-->
+<script type="text/javascript" src="js/midnight.jquery.min.js"></script>
+
+<!--jQuery Tooltips-->
+<script type="text/javascript" src="bower_components/tooltipster/js/jquery.tooltipster.min.js"></script>
+
+<!--jQuery Tabulous-->
+<script type="text/javascript" src="bower_components/tabulous/tabulous.js"></script>
+
+<!--Custom js file-->
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!--Custom js script auto play video-->
+<script>
+jQuery(document).ready(function() {
+	"use strict";
+	$('.myVideo video').get(0).play();
+});
+</script>
+
+</body>
+</html>

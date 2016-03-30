@@ -1,0 +1,117 @@
+body {
+		  font-family: "Helvetica Neue", Arial, sans-serif;
+			font-size: 30px;
+			font-weight: 300;
+		  height: 100%;
+		  width:100%;
+		  margin: 0;
+		  padding: 0;
+		  position: relative;
+		}
+
+		* {
+		  -webkit-box-sizing: border-box;
+		  -moz-box-sizing: border-box;
+		  -ms-box-sizing: border-box;
+		  box-sizing: border-box;
+		}
+
+
+
+
+		/* Twitter Bird */
+		.bird-div{
+			cursor: pointer;
+			display: inline-block;
+			height: 150px;
+			width: 150px;
+		    position: relative;
+		    transition: all 1.0s linear;
+
+			animation-name: movefly;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-delay: 2s;
+			animation-iteration-count: infinite;
+			
+			-moz-animation-name: movefly;
+			-moz-animation-duration: 5s;
+			-moz-animation-timing-function: linear;
+			-moz-animation-delay: 2s;
+			-moz-animation-iteration-count: infinite;
+			
+
+			-webkit-animation-name: movefly;
+			-webkit-animation-duration: 5s;
+			-webkit-animation-timing-function: linear;
+			-webkit-animation-delay: 2s;
+			-webkit-animation-iteration-count: infinite;
+			
+		}
+
+		.twitter-bird {
+			/*background-image: url(twitter-bird-sprite.png);*/
+			background-image: url(http://minimalmonkey.com/lab/css3-animations/twitter-bird-sprite.png);
+			cursor: pointer;
+			display: inline-block;
+			height: 150px;
+			width: 150px;
+			
+			animation-name: fly;
+			animation-duration: 0.2s ;
+			animation-timing-function: steps(3);
+			animation-iteration-count: infinite;
+
+			-moz-animation-name: fly;
+			-moz-animation-duration: 0.2s ;
+			-moz-animation-timing-function: steps(3);
+			-moz-animation-iteration-count: infinite;
+
+			-webkit-animation-name: fly;
+			-webkit-animation-duration: 0.2s ;
+			-webkit-animation-timing-function: steps(3);
+			-webkit-animation-iteration-count: infinite;
+		}
+
+		@-webkit-keyframes fly {
+			from { background-position: 0 0; }
+		    to { background-position: -450px 0; }
+		}
+		@-moz-keyframes fly {
+			from { background-position: 0 0; }
+		    to { background-position: -450px 0; }
+		}
+		@keyframes fly {
+			from { background-position: 0 0; }
+		    to { background-position: -450px 0; }
+		}
+
+
+		@-webkit-keyframes movefly {
+		   0%   {left:0%; transform: rotateY(0deg);}
+		    25%  {left:50%;transform: rotateY(0deg);}
+		    49%  {transform: rotateY(0deg);}
+		    50%  {left:90%;transform: rotateY(180deg);}
+		    75%  {left:50%;transform: rotateY(180deg);}
+		    99%  {transform: rotateY(180deg);}
+		    100% {left:0%;transform: rotateY(0deg);}
+		}
+		@-moz-keyframes movefly {
+		    0%   {left:0%; transform: rotateY(0deg);}
+		    25%  {left:50%;transform: rotateY(0deg);}
+		    49%  {transform: rotateY(0deg);}
+		    50%  {left:90%;transform: rotateY(180deg);}
+		    75%  {left:50%;transform: rotateY(180deg);}
+		    99%  {transform: rotateY(180deg);}
+		    100% {left:0%;transform: rotateY(0deg);}
+		}
+
+		@keyframes movefly {
+		    0%   {left:0%; transform: rotateY(0deg);}
+		    25%  {left:50%;transform: rotateY(0deg);}
+		    49%  {transform: rotateY(0deg);}
+		    50%  {left:90%;transform: rotateY(180deg);}
+		    75%  {left:50%;transform: rotateY(180deg);}
+		    99%  {transform: rotateY(180deg);}
+		    100% {left:0%;transform: rotateY(0deg);}
+		}
